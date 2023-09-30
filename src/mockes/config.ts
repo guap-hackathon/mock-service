@@ -1,18 +1,18 @@
-import { ApiConfig } from '../api-config-builder'
-import { successHandler } from './mock-handlers'
+import { ApiConfig } from "../api-config-builder";
+import { successHandler } from "./mock-handlers";
 
 export const faceApiConfig: ApiConfig = {
-  path: '/app',
+  path: "/app",
   isMocked: true,
   proxyOptions: {
-    targetUrl: ''
+    targetUrl: "",
   },
   routes: [
     {
-      type: 'get',
-      url: '/check-face',
+      type: "post",
+      url: "/check-face",
       mockHandler: successHandler,
-      isMocked: true
-    }
-  ]
-}
+      isMocked: true,
+    },
+  ],
+};
